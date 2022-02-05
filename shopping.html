@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping website </title>
+    <style>
+        * {}
+
+        body {
+            /* background-image: url('b1.jpg');  */
+            background-color: bisque;
+        }
+
+        /*navigation bar*/
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+        }
+
+        /* navigation bar: logo and image*/
+        #logo {
+            margin: 34px 45px;
+        }
+
+        /* navigation bar: image */
+
+        #logo img {
+            height: 80px;
+            margin: 0px 8px;
+            border-radius: 10em;
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        /* navigation bar: ul */
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.2em;
+        }
+
+        #navbar ul a {
+            display: block;
+            padding: 3px 22px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: black;
+            font-family: serif;
+            font-size: 1.8em;
+        }
+
+        /* before help to color background and your contant front */
+        #navbar::before {
+            content: "";
+            background-color: rgb(5, 99, 99);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            overflow: scroll;
+        }
+
+        #navbar a:hover {
+            color: black;
+            cursor: pointer;
+            background-color: rgb(51, 51, 122);
+            border-radius: 2em;
+        }
+
+        /* this is style for home section */
+        #home {
+            display: flex;
+            flex-direction: column;
+            height: 722px;
+            padding: 3px 200px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* before use to background degin*/
+        #home::before {
+            content: "";
+            background: url('bg7 (2).jpg');
+            position: absolute;
+
+            right: ;
+            height: 100%;
+            width: 100%;
+            z-index: -11;
+            opacity: 1.8;
+
+        }
+
+        /* it is use  utility classes */
+        #home h1 {
+            color: white;
+            text-align: center;
+        }
+
+        #boss {
+            display: flex;
+            flex-direction: column;
+            padding: 6px 22px;
+            /* border:1px solid gray;   */
+            background-color: rgb(42, 89, 121);
+            color: rgb(182, 34, 34);
+            font-size: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #home p {
+            display: flex;
+            color: rgb(218, 149, 23);
+            text-align: center;
+            font-size: 1em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .h-home {
+            font-size: 1.9rem;
+            padding: 12px;
+        }
+
+        .btn {
+            display: block;
+            margin: 10px auto;
+            flex-direction: column;
+            padding: 6px 20px;
+            border: 1px solid gray;
+            background-color: brown;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 15px;
+            cursor: pointer;
+
+        }
+
+        /*   Services Section*/
+        #services {
+            margin: 15px 433px;
+            display: table-cell;
+            /* border: 6px solid red; */
+            padding: 28px 19px;
+        }
+
+        #services .box {
+            /* border:1px solid red; */
+            padding: 22px;
+            margin: 30px 334px;
+            border-radius: 20px;
+            background-color: rgb(139, 158, 108);
+            z-index: 5;
+            opacity: 50;
+        }
+
+        #services .box img {
+            display: inline-flex;
+            height: 8rem;
+            margin: 1px 66px;
+        }
+
+        }
+
+        #services .btn {
+            display: flex;
+            flex-direction: column;
+            padding: 6px 20px;
+            border: 1px solid gray;
+            background-color: brown;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 15px;
+
+        }
+
+        .btt {
+            display: flex;
+            flex-direction: column;
+            padding: 6px 20px;
+            /* border:1px solid gray; */
+            background-color: rgb(35, 108, 141);
+            color: white;
+            font-size: 2rem;
+            border-radius: 15px;
+
+        }
+
+        /* utility classses*/
+        .h-primary {
+
+            font-size: 3.5rem;
+            padding: 1px;
+            text-align: center;
+        }
+
+        .h-secondary {
+            font-size: 1.5rem;
+            padding: 1px;
+            text-align: center;
+
+        }
+
+        /* clients sections css
+*/
+        #client-section {
+            height: 200px;
+
+        }
+
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+            text-align: center;
+        }
+
+        #clients img {
+            height: 110px;
+        }
+
+        #sub-client {
+            padding: 44px;
+
+        }
+
+        .table,
+        th,
+        td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+
+        .th,
+        td {margin: auto;
+            background-color: #96D4D4;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id=navbar>
+        <div id="massage"></div>
+        <div id="logo">
+            <img src="l1.png" alt="MyOnlineShopping.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#Home">Home</a> </li>
+            <li class="item"><a href="#service">service</a> </li>
+            <li class="item"><a href="#About us">About us</a> </li>
+            <li class="item"><a href="#Contact">Contact</a> </li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-home">Welcome To MyOnlineShopping</h1>
+        <div class="home">
+            <form id="submitForm">
+                <div id="boss">
+
+                    <input type="text" name="Name" id="Name" placeholder="Enter your Name"
+                        style="background-color: cadetblue; font-size: 20px; border-radius: 20px;color: black;blackpadding:10px; display:inline-block; margin: 11px auto;">
+                    <input type="text" name="email"  id="email"placeholder="Enter your Email"
+                        style="background-color: cadetblue; font-size: 20px; border-radius: 20px;color: black;blackpadding:10px; display: block; margin: 11px auto;  ">
+                    <input type="text" name="contect" id="contect" placeholder="Enter your contact"
+                        style="background-color: cadetblue; font-size: 20px; border-radius: 20px;color: black;blackpadding:10px; display: block; margin: 11px auto; ">
+                    <input type="text" name="address" id="address" placeholder="Enter your Address"
+                        style="background-color: cadetblue; font-size: 20px; border-radius: 20px;color: black;blackpadding:10px; display: block; margin: 11px auto; ">
+                    <button class="btt" onclick="#">submit</button>
+                </div>
+            </form>
+
+        </div>
+        </div>
+        <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi nisi iusto aperiam sit maxime
+            excepturi commodi fugit, perspiciatis eaque ducimus facilis. Architecto eaque inventore quod. Voluptates
+            eligendi enim suscipit laudantium!</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, deleniti harum! Unde facere non necessitatibus veniam voluptatem officia saepe expedita repellendus neque cupiditate doloribus natus quas veritatis alias, recusandae enim!</p> -->
+        <button class="btn" onclick="togglehide()">hide Now</button>
+    </section>
+    <section class="services-cont">
+        <h1 class="h-primary center ">Our services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="j (1).jpg" alt="">
+                <img src="j (2).jpg" alt="">
+                <img src="j (4).jpg" alt="">
+                <h2 class="h-secondary center">hoodies for weman </h2>
+
+                <p class="center">ls, dignissimos sit nemo possimuoptio.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="s (8).jpg" alt="">
+                <img src="s (3).jpg" alt="">
+                <img src="s (6).jpg" alt="">
+                <h2 class="h-secondary center">shirt </h2>
+                <p class="center"> eligendi reprehenderit, praesentium optio.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="w (5).jpg" alt="">
+                <img src="w (3).jpg" alt="">
+                <img src="w (7).jpg" alt="">
+                <h2 class="h-secondary center">watch </h2>
+                <p class="center">Loremut harum maiores, praesentium .</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="hb (6).jpg" alt="">
+                <img src="1.1.jpg" alt="">
+                <img src="1.2.jpg" alt="">
+                <h2 class="h-secondary center"> hand bags </h2>
+                <p class="center">Lorem ipsum, dolor praesentium optio.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="sh (6).jpg" alt="">
+                <img src="sh (7).jpg" alt="">
+                <img src="sh (8).jpg" alt="">
+                <h2 class="h-secondary center">shoes </h2>
+                <p class="center">Lorem ipsum, dolor s amet contium optllll.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="j (9).jpg" alt="">
+                <img src="j (3).jpg" alt="">
+                <img src="j (5).jpg" alt="">
+                <h2 class="h-secondary center"> jakets </h2>
+                <p class="center">Lorem ipsum, dolor s amet contium optllll.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="p (2).jpg" alt="">
+                <img src="p (3).jpg" alt="">
+                <img src="p (4).jpg" alt="">
+                <h2 class="h-secondary center"> jens </h2>
+                <p class="center">Lorem ipsum, dolor s amet contium optllll.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 id="h-primary center" style=" 
+        
+            font-size: xxx-large;
+            text-align: center;">Our Clients</h1>
+        <div id="clients">
+            <div id="sub-clients">
+                <img src="a.2.png" alt="Our Client">
+                <img src="a.1.jfif" alt="Our Client">
+                <img src="a.3.jfif" alt="Our Client">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="op">
+            <table style="width:100%">
+                <thead>
+                <tr>
+                    <th>name</th>
+                    <th>Email</th>
+                    <th>contact</th>
+                    <th>Address></th>
+                </tr>
+                </thead>
+                <tbody id="tableBody">
+                <tr>
+                    <td>saurabh</td>
+                    <td>sc0360485@gmai.com</td>
+                    <td>8447890872</td>
+                    <td>delhi</td>
+                </tr>
+                </tbody>
+
+
+            </table>
+    </div>
+    </section>
+    <script>
+        let= prompt("what is your name"," ")
+        function togglehide(){
+            let btt = document.getElementById('btt');
+            let para = document.getElementById('para');
+            
+            
+                para.style.display="none";
+            
+        }
+    
+    </script>
+
+
+</body>
+
+</html>
